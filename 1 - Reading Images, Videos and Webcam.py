@@ -3,7 +3,9 @@ import keyboard
 
 # To read images, we use cv2.imread('path'):
 
-img = cv2.imread('Resources/bird.png')
+img_path = r'Paste the path to your image file here'
+
+img = cv2.imread(img_path)
 
 # To show images, we use cv2.imshow('output_window_name', image_variable):
 # We also use cv2.waitkey(no_of_millisecs) '0 = until closed' to keep the image showing for a specified amount of time.
