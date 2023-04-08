@@ -4,7 +4,9 @@ import cv2
 
 # Color spaces are systems of representing colors. Some examples are RGB, BGR, HSV and GRAY.
 
-image = cv2.imread(f"Resources/bird.png")
+img_path = r'Paste the path to your image file here' 
+
+img = cv2.imread(img_path)
 cv2.imshow('BGR image', image)
 cv2.waitKey(0)
 
