@@ -3,7 +3,7 @@ import numpy as np
 
 img_path = 'Paste the path to your image file here'
 
-img = cv2.imread('')
+img = cv2.imread(img_path)
 
 # To turn this color image into B/W, we can use:
 
