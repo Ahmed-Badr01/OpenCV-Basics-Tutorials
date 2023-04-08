@@ -1,4 +1,5 @@
-"""This script looks different from the one Murtaza made in his video, but most if not all of the changes are renames and reformats of the same code."""
+"""This script looks different from the one Murtaza made in his video, but most if not all of the changes are renames and reformats of the same code.
+I found the original script hard to read and unintuitive. This was mostly due to formatting, so I improved it here."""
 
 import cv2
 import copy
