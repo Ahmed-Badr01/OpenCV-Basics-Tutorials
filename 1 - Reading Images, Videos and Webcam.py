@@ -1,21 +1,22 @@
 import cv2
 import keyboard
 
-# To read images, we use cv2.imread('path'):
+# To read images, we use cv2.imread(r'path'):
 
-img_path = r'Paste the path to your image file here'
+img_path = r'Paste the path to your image file here' 
+# r stands for raw. This stops Python from escaping characters like "\", meaning the path can pasted as-is.
 
 img = cv2.imread(img_path)
 
 # To show images, we use cv2.imshow('output_window_name', image_variable):
 # We also use cv2.waitkey(no_of_millisecs) '0 = until closed' to keep the image showing for a specified amount of time.
 
-cv2.imshow('Bird', img)
+cv2.imshow('Image window title', img)
 cv2.waitKey(0)
 
 # To read videos, we use cv2.VideoCapture('path'):
 
-vid = cv2.VideoCapture('Resources/Brooklyn.Nine-Nine.mp4')
+vid = cv2.VideoCapture(r'video path')
 
 # To show the video, OpenCV turn it into images, and then shows the images in a while loop using cv2.imshow:
 # If we try to skip the 'if cv2.waitkey(number)' part altogether, the video will fail to show.
