@@ -1,3 +1,5 @@
+"""This script looks different from the one Murtaza made in his video, but most if not all of the changes are renames and reformats of the same codes."""
+
 import cv2
 import copy
 import numpy as np
@@ -5,10 +7,11 @@ import numpy as np
 
 def stack_images(image_list, columns, scale):
     """ Stack Images together to display in a single window.
-    @param image_list: list of images to stack
-    @param columns: the number of images in a row
-    @param scale: bigger than 1 -> enlarge and smaller than 1 -> shrink.
-    @return: Stacked Image """
+    parameters:
+    image_list: list of images to stack
+    columns: the number of images in a row
+    scale: bigger than 1 -> enlarge and smaller than 1 -> shrink.
+    returns: Stacked Image """
     img_list = copy.deepcopy(image_list)
 
     # Make the array full by adding blank image(s) to fill the row, otherwise OpenCV can't work:
