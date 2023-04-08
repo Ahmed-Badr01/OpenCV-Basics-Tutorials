@@ -1,11 +1,14 @@
 import numpy as np
 import cv2
 
-# In OpenCV, the origin (0,0) is in the top left corner of the screen.
+# In OpenCV, the origin (0,0) is on the top left corner of the screen.
 
 # To resize an image, we'd like to first know its current size.
 
-img = cv2.imread('Resources/bird.png')
+img_path = r'Paste the path to your image file here' 
+
+img = cv2.imread(img_path)
+
 print(img.shape)  # Prints: HEIGHT THEN WIDTH, then Number of Channels.
 
 # To resize the image, we can use:
@@ -16,7 +19,6 @@ cv2.imshow('resized bird', img_resized)
 print(img_resized.shape)
 
 # A quick function to rescale a given frame to a given scale:
-
 
 def rescale_frame(frame, scale=0.5):
     # Will work for images, video frames and webcam frames.
@@ -36,7 +38,6 @@ enlarge an image, it will generally look best with c#INTER_CUBIC (slow) or #INTE
 
 # To change the properties of cam videos, one can also define a quick function:
 
-
 def modify_cam_feed(cam, scale=0.75):
     # This function will only work with live cam feed.
     cam.set(3, 720)  # Set width to 720.
@@ -52,7 +53,6 @@ cv2.waitKey(0)
 
 # Translation: We can use cv2.warpAffine for that.
 
-
 def translate(image, x_shift, y_shift):
     # x shift +ve -> right. x shift -ve -> left.
     # y shift +ve -> down. y shift -ve -> up.
@@ -62,7 +62,6 @@ def translate(image, x_shift, y_shift):
 
 
 # Rotation: We can also use cv2.warpAffine for that.
-
 
 def rotate(image, angle, rotation_center=None):
     height, width = image.shape[:2]
